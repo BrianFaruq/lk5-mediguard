@@ -1,7 +1,7 @@
-public class SecurityEnum {
+public class Security {
     private final int securityLevel;
     private final String securityLevelName;
-    public SecurityEnum(int securityLevel) {
+    public Security(int securityLevel) {
         this.securityLevel = securityLevel;
         switch (securityLevel) {
             case 0:
@@ -25,5 +25,4 @@ public class SecurityEnum {
     public String levelName() {
         return securityLevelName;
     }
-
 }

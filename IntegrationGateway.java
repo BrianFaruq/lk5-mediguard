@@ -4,7 +4,7 @@ public class IntegrationGateway<T> {
         this.object = object;
     }
 
-    public T fetchData(){
+    public void fetchData(){
         
     }
    }

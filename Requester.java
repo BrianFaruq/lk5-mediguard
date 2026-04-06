@@ -4,6 +4,6 @@ public class Requester {
         this.requesterClearanceLevel = requesterClearanceLevel;
     }
     public int getRequesterClearanceLevel() {
-        return requesterClearanceLevel;
+        return this.requesterClearanceLevel;
     }
 }
