@@ -15,7 +15,8 @@ public class SecureResponse<T extends MedicalRecord & Confidential<PatientProfil
         return originalData;
     }
 
-    public T getData(){
-        return data;
+    @Override
+    public String toString(){
+        return applyMask(data).toString();
     }
 }
