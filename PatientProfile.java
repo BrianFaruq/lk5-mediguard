@@ -4,6 +4,7 @@ public class PatientProfile implements Versioned, MedicalRecord, Confidential<Pa
     protected final String name;
     protected final String illness;
     protected final Security securityLevel;
+    protected String[] record = new String[5];
     public PatientProfile(int patientID, String name, String illness, int version, Security securityLevel) {
         this.patientID = patientID;
         this.name = name;
@@ -31,12 +32,21 @@ public class PatientProfile implements Versioned, MedicalRecord, Confidential<Pa
             return this;
         }
     }
+
+    @Override
+    public void addRecord(String record) {
+        for(int i=4;i>0;i--){
+            this.record[i] = this.record[i-1];
+        }
+        this.record[0] = record;
+    }
+
     @Override
     public String toString(){
-        return "### Patient Profile ###"+"\n"+
+        return "========== Patient Profile ==========\n"+
                 "Patient ID: "+this.patientID+"\n"+
                 "Name: "+this.name+"\n"+
                 "Illness: "+this.illness+"\n"+
-                "Security Level: "+this.securityLevel.level()+"\n";
+                "Security Level: "+this.securityLevel.levelName()+"\n";
     }
 }

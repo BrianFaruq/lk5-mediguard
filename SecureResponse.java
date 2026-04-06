@@ -1,4 +1,4 @@
-public class SecureResponse<T> {
+public class SecureResponse<T extends MedicalRecord & Confidential<PatientProfile> & Versioned> {
     private T data;
     private int requesterClearanceLevel;
 

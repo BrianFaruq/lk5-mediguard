@@ -22,7 +22,7 @@ public class PatientProfileV2 extends PatientProfile {
 
     @Override
     public String toString(){
-        return super.toString()+"\n"
+        return super.toString()
                 +"Version : "+this.version+"\n"
                 +"Allergy : "+this.allergy+"\n";
     }
